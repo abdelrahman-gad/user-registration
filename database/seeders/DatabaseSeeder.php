@@ -13,12 +13,8 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // WithoutModelEvents::class;
-
         $this->call([
-            UserTypeSeeder::class,
             UserSeeder::class,
-            AdminSeeder::class,
         ]);
 
     }

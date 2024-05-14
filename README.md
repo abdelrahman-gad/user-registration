@@ -19,7 +19,7 @@ Follow these steps to get the project running:
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/abdelrahman-gad/ecommerce.git
+    git clone https://github.com/abdelrahman-gad/user-registration
     ```
 
 2. Install PHP dependencies:
@@ -55,10 +55,14 @@ DB_PASSWORD=
 6. Update `.env` Variables
 
 ```
-TWILIO_SID=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-TWILIO_FROM=xxxxxxxxxxx
-JWT_SECRET=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+MAIL_MAILER=smtp
+MAIL_HOST=mailpit
+MAIL_PORT=1025
+MAIL_USERNAME=null
+MAIL_PASSWORD=null
+MAIL_ENCRYPTION=null
+MAIL_FROM_ADDRESS="hello@example.com"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 7. Run database migrations:
@@ -82,16 +86,6 @@ To run tests:
 ```bash
 php artisan db:seed
 ```
-
-
-### Default Credentials for admin side
-
-For testing purposes, the project provides the following default credentials:
-
-- **Username:** `admin@admin.com`
-- **Password:** `password`
-
-
 
 ### Default Credentials for user side
 
